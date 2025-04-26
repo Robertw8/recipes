@@ -10,6 +10,11 @@
    `cd recipes`
 2. **Install dependencies**
    `npm i`
+3. **Create .env file in "server" folder and paste:**
+   `PORT=4000
+API_BASE_URL=https://www.themealdb.com/api/json/v1/1`
+4. **Create .env file in "client" folder and paste:**
+   `VITE_BASE_URL=http://localhost:4000`
 
 ## Running the app
 
