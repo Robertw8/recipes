@@ -7,4 +7,5 @@ interface Recipe {
   strInstructions: string;
   [key: `strIngredient${number}`]: string;
 }
+
 export default Recipe;

@@ -12,7 +12,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL || "";
 
 type filter = "ingredient" | "country" | "category";
 
-const Recipes: React.FC = () => {
+const RecipesPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const paramFilter =
@@ -25,7 +25,6 @@ const Recipes: React.FC = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const debouncedFilter = useDebounce(filterValue, 1000);
-  const notFound = useNotFoundTimeout(recipes, isLoading);
 
   useEffect(() => {
     if (!currentFilter || !filterValue) {
@@ -64,6 +63,8 @@ const Recipes: React.FC = () => {
     },
   }));
 
+  const notFound = useNotFoundTimeout(recipes, isLoading);
+
   return (
     <div className="container py-20 px-4 mx-auto">
       <h1 className="text-4xl min-md:text-5xl text-center">
@@ -85,13 +86,9 @@ const Recipes: React.FC = () => {
           disabled={!currentFilter}
         />
       </div>
-      {!notFound && !isLoading ? (
-        <RecipesList recipes={recipes} isLoading={isLoading} />
-      ) : (
-        <p>Nothing found</p>
-      )}
+      {!notFound ? <RecipesList recipes={recipes} isLoading={isLoading} /> : <p>Nothing found</p>}
     </div>
   );
 };
 
-export default Recipes;
+export default RecipesPage;

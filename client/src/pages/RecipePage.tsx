@@ -9,7 +9,7 @@ import { RecipeInfo, Sidebar } from "../components";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL || "";
 
-const Recipe: React.FC = () => {
+const RecipePage: React.FC = () => {
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [recipesOfCategory, setRecipesOfCategory] = useState<Recipe[]>([]);
 
@@ -17,7 +17,6 @@ const Recipe: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(window.innerWidth > 768);
 
   const { id } = useParams<{ id: string }>();
-  const notFound = useNotFoundTimeout([recipe], isLoading);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -62,6 +61,8 @@ const Recipe: React.FC = () => {
     }).filter(ingr => Boolean(ingr) && ingr.trim() !== "");
   }, [recipe]);
 
+  const notFound = useNotFoundTimeout([recipe], isLoading);
+
   if (notFound) {
     return <p className="text-center text-4xl">Recipe not found</p>;
   }
@@ -97,4 +98,4 @@ const Recipe: React.FC = () => {
   );
 };
 
-export default Recipe;
+export default RecipePage;
