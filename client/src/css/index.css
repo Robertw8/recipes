@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/public/fonts/Roboto_Variable.ttf") format("truetype");
+  src: url("/fonts/Roboto_Variable.ttf") format("truetype");
   font-display: swap;
 }
 

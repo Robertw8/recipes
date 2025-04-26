@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         </NavLink>
       </Button>
       <Divider />
-      <h4 className="text-xl mt-6">More receipts</h4>
+      <h4 className="text-xl mt-6 font-semibold">More receipts</h4>
       <ul className="mt-6">
         {!isLoading ? (
           recipesOfCategory?.map((rec: Recipe) => (

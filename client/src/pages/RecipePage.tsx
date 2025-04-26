@@ -69,17 +69,15 @@ const RecipePage: React.FC = () => {
 
   return (
     <>
-      <Button
-        size="middle"
-        style={{ position: "absolute", right: 16, top: 16 }}
-        onClick={() => setSidebarOpen(true)}
-      >
-        <MenuFoldOutlined />
-      </Button>
-      <div className="container mx-auto py-20 px-4">
-        <Button onClick={() => navigate(-1)}>
-          <RollbackOutlined />
-        </Button>
+      <div className="container mx-auto py-12 px-4">
+        <div className="flex justify-between">
+          <Button onClick={() => navigate(-1)}>
+            <RollbackOutlined />
+          </Button>
+          <Button size="middle" onClick={() => setSidebarOpen(true)}>
+            <MenuFoldOutlined />
+          </Button>
+        </div>
         <Divider />
         {!isLoading ? (
           <RecipeInfo recipe={recipe} ingredients={ingredients} />

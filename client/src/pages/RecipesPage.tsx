@@ -66,7 +66,7 @@ const RecipesPage: React.FC = () => {
   const notFound = useNotFoundTimeout(recipes, isLoading);
 
   return (
-    <div className="container py-20 px-4 mx-auto">
+    <div className="container py-12 px-4 mx-auto">
       <h1 className="text-4xl min-md:text-5xl text-center">
         Recipes {currentFilter && `by ${currentFilter}`}
       </h1>
