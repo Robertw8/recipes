@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/public/fonts/Roboto_Variable.ttf") format("truetype");
+  font-display: swap;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  color: #4da1a9;
+  background-color: #f6f4f0;
+}
