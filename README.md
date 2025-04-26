@@ -11,8 +11,17 @@
     git clone https://github.com/Robertw8/recipes.git
     cd recipes
     ```
-3. **Install dependencies:**
+3. **Install dependencies for both parts of the app:**
    <br/>
+   ```
+   cd client
+   ```
+   ```
+   npm i
+   ```
+   ```
+   cd ../server
+   ```
    ```
    npm i
    ```
@@ -40,10 +49,10 @@
 
    Production:
    ```
-   1. npm run build
+   npm run build
    ```
    ```
-   2. npm start
+   npm start
    ```
 
    Address both for development and production modes:
@@ -64,10 +73,10 @@
    Production:
 
    ```
-   1. npm run build
+   npm run build
    ```
    ```
-   2. npm run preview
+   npm run preview
    ```
 
    Address for production mode:
