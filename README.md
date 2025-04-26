@@ -6,13 +6,13 @@
 ## Installation
 
 1. **Clone the repo**
-   `git clone https://github.com/Robertw8/recipes.git`
-   `cd recipes`
+   1.1. `git clone https://github.com/Robertw8/recipes.git`
+   1.2. `cd recipes`
 2. **Install dependencies**
    `npm i`
 3. **Create .env file in "server" folder and paste:**
    `PORT=4000
-API_BASE_URL=https://www.themealdb.com/api/json/v1/1`
+   API_BASE_URL=https://www.themealdb.com/api/json/v1/1`
 4. **Create .env file in "client" folder and paste:**
    `VITE_BASE_URL=http://localhost:4000`
 
